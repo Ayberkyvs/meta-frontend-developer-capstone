@@ -1,5 +1,5 @@
 nav {
-    grid-column: 5 / 11;
+    grid-column: 6 / 11;
     width: 100%;
     height: fit-content;
 }
@@ -16,6 +16,6 @@ nav > ul > li > a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.5rem;
 }

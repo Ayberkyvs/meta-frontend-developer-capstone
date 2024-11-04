@@ -5,7 +5,7 @@ import Nav from '../Nav/Nav'
 export default function Header() {
   return (
     <header>
-      <div id='inner-header'>
+      <div id='inner-header' className='grid'>
         <img src={mainLogo} alt='Little Lemon Logo'/>
         <Nav />
       </div>
