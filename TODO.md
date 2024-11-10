@@ -1,0 +1,1 @@
+Testimonials Card ismi değişebilir başka amaçla kullanılabilir bişi

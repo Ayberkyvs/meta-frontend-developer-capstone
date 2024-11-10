@@ -1,11 +1,38 @@
-#button {
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 120px;
     height: 40px;
-    text-align: center;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    background-color: #7F878F;
-    color: #ffffff;
+    background-color: var(--accent-500);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: 0.1s;
+    background-color: var(--accent-100);
+    border: 2px solid var(--accent-500);
+    color: var(--accent-500);
+}
+
+.button:disabled {
+    background-color: var(--accent-100);
+    color: var(--accent-200);
+    border: none;
+    cursor: not-allowed;
+}
+
+.button--fluid {
+    width: 100%;
+}
+
+.button__icon {
+    margin-left: 8px;
+    font-size: 1em;
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 import './Heading.css'
-export default function Heading({title, subtitle}) {
+export default function Heading({title, subtitle, variant=""}) {
   return (
-    <div id='heading'>
-        <h1>{title}</h1>
-        <h3>{subtitle}</h3>
+    <div className='heading'>
+        <h1 className={`heading__title ${variant === "section" ? "heading__title--section" : ""}`}>{title}</h1>
+        {subtitle && <h3 className='heading__subtitle'>{subtitle}</h3>}
     </div>
   )
 }

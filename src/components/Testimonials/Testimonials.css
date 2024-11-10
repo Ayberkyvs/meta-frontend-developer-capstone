@@ -1,0 +1,17 @@
+section#testimonials {
+    background-color: var(--secondary-50);
+    grid-template-rows: auto auto;
+    gap: 27px;
+}
+section#testimonials .testimonials__heading {
+    display: flex;
+    grid-area: 1 / 3 / 1 / 11;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+}
+section#testimonials .testimonials__cards {
+    display: flex;
+    justify-content: space-between;
+    grid-area: 2 / 3 / 2 / 11;
+}

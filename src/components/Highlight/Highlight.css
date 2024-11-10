@@ -1,0 +1,21 @@
+section#highlight {
+    background-color: var(--background);
+    grid-template-rows: auto auto;
+    min-height: 700px;
+    padding-top: 54px;
+    padding-bottom: 54px;
+    gap: 27px;
+    align-items: center;
+}
+section#highlight .highlight__heading {
+    display: flex;
+    grid-area: 1 / 3 / 1 / 11;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+}
+section#highlight .highlight__cards {
+    display: flex;
+    justify-content: space-between;
+    grid-area: 2 / 3 / 2 / 11;
+}

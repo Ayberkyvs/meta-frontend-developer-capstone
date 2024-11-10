@@ -1,0 +1,12 @@
+div.stars {
+    display: flex;
+    gap: 5px;
+}
+
+span.stars__star {
+    color: var(--secondary-700);
+}
+
+span.stars__star--filled {
+    color: var(--secondary-600);
+}
