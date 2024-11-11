@@ -3,9 +3,18 @@
     width: 100%;
     height: fit-content;
 }
+
+.header__nav--vertical {
+    display: block !important;
+    grid-column: 6 / 11;
+    width: 100%;
+    height: fit-content;
+}
+
 .header__nav--vertical > ul {
     flex-direction: column;
 }
+
 .header__nav > ul {
     display: flex;
     justify-content: space-around;
@@ -15,8 +24,21 @@
     padding: 0;
     margin: 0;
 }
+
 .header__nav > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1440px) {
+    .header__nav {
+        grid-column: 4 / 9;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .header__nav {
+        display: none;
+    }
 }

@@ -41,3 +41,30 @@ div#about__photos img:nth-of-type(2) {
     top: 0px;
     right: 0px;
 }
+
+@media only screen and (max-width: 1440px) {
+    div#about__text {
+        grid-column: 1 / span 4;
+    }
+    div#about__photos {
+        grid-column: span 3 / 9;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    div#about__text {
+        grid-column: 1 / span 4;
+    }
+    div#about__photos {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    div#about__text {
+        grid-column: span 2;
+    }
+    div#about__text p {
+        font-size: 1rem;
+    }
+}

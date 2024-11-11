@@ -2,6 +2,7 @@ section#testimonials {
     background-color: var(--secondary-50);
     grid-template-rows: auto auto;
     gap: 27px;
+    height: 400px;
 }
 section#testimonials .testimonials__heading {
     display: flex;
@@ -14,4 +15,42 @@ section#testimonials .testimonials__cards {
     display: flex;
     justify-content: space-between;
     grid-area: 2 / 3 / 2 / 11;
+}
+
+@media only screen and (max-width: 1440px) {
+    section#testimonials .testimonials__heading {
+        grid-area: 1 / 1 / 1 / 9;
+    }
+    section#testimonials .testimonials__cards {
+        grid-area: 2 / 1 / 2 / 9;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    section#testimonials {
+        height: 500px !important;
+    }
+    section#testimonials .testimonials__heading {
+        grid-area: 1 / 1 / 1 / 5;
+    }
+    section#testimonials .testimonials__cards {
+        grid-area: 2 / 1 / 2 / 5;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+    section#testimonials .testimonials__cards > *{
+        flex: 0 0 auto;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section#testimonials .testimonials__heading {
+        grid-area: 1 / 1 / 1 / 3;
+    }
+    section#testimonials .testimonials__cards {
+        grid-area: 2 / 1 / 2 / 3;
+    }
 }

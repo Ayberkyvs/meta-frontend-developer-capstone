@@ -1,6 +1,9 @@
 footer#footer {
+    position: relative;
     height: 400px;
     background-color: var(--background);
+    padding-top: 54px;
+    padding-bottom: 54px;
 }
 
 footer#footer .footer__navbar div {
@@ -37,4 +40,66 @@ footer#footer .footer__navbar {
     text-decoration: none;
     text-transform: none;
     font-size: 1rem;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-300);
+    position: absolute;
+    bottom: -50px;
+    padding: 0px 30px 0px 30px;
+}
+.footer__copyright * {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-family: 'Markazi Text';
+}
+
+@media only screen and (max-width: 1440px) {
+    footer#footer .footer__logo {
+        grid-column: 1 / span 2;
+    }
+
+    footer#footer .footer__navbar {
+        grid-column: span 6 / 9;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    footer#footer {
+        grid-template-rows: repeat(2, auto);
+        height: fit-content;
+        gap: 50px;
+    }
+    footer#footer .footer__logo {
+        grid-column: 1 / span 2;
+    }
+
+    footer#footer .footer__navbar {
+        grid-area: 2 / 1 / 2 / 5;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    footer#footer .footer__logo {
+        grid-column: span 2;
+    }
+    footer#footer .footer__navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+        grid-area: 2 / 1 / 2 / span 2;
+    }
+    .footer__copyright {
+        padding: 0px;
+    }
+    .footer__copyright * {
+        font-size: 1rem;
+    }
 }

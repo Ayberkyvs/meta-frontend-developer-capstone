@@ -20,6 +20,9 @@ export default function Footer() {
           <Nav vertical className='footer__nav'/>
         </div>
       </div>
+      <div className='footer__copyright'>
+        <p>© 2024 - <a href='https://www.ayberkyavas.com' target='_blank'>Ayberk Yavas</a> - <a href='https://www.coursera.org/learn/meta-front-end-developer-capstone/' target='_blank'>Meta Frontend Dev Capstone</a></p>
+      </div>
     </footer>
   )
 }

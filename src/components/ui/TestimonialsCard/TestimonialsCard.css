@@ -54,3 +54,10 @@ hr.card--testimonials__divider {
     background-color: var(--card-border);
     border: none;
 }
+
+@media only screen and (max-width: 576px) {
+    div.card--testimonials {
+        max-width: 241px;
+        min-height: 236px;
+    }
+}

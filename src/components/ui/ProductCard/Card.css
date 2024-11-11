@@ -45,3 +45,10 @@ div.card--product__content div.card--product__content__header h4 {
 div.card--product__content div.card--product__content__header h3 {
     font-size: 2rem;
 }
+
+@media only screen and (max-width: 576px) {
+    div.card--product {
+        max-width: 235px;
+        min-height: 349px;
+    }
+}

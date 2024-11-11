@@ -2,20 +2,58 @@ section#highlight {
     background-color: var(--background);
     grid-template-rows: auto auto;
     min-height: 700px;
-    padding-top: 54px;
-    padding-bottom: 54px;
     gap: 27px;
     align-items: center;
 }
+
 section#highlight .highlight__heading {
     display: flex;
     grid-area: 1 / 3 / 1 / 11;
     width: 100%;
     height: fit-content;
     justify-content: space-between;
+    align-items: center;
 }
+
 section#highlight .highlight__cards {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     grid-area: 2 / 3 / 2 / 11;
+}
+
+@media only screen and (max-width: 1440px) {
+    section#highlight .highlight__heading {
+        grid-area: 1 / 1 / 1 / 9;
+    }
+    section#highlight .highlight__cards {
+        grid-area: 2 / 1 / 2 / 9;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    section#highlight .highlight__heading {
+        grid-area: 1 / 1 / 1 / 5;
+    }
+    section#highlight .highlight__cards {
+        grid-area: 2 / 1 / 2 / 5;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    section#highlight .highlight__cards > * {
+        flex: 0 0 auto;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section#highlight .highlight__heading {
+        grid-area: 1 / 1 / 1 / 3;
+    }
+    section#highlight .highlight__cards {
+        grid-area: 2 / 1 / 2 / 3;
+    }
 }
