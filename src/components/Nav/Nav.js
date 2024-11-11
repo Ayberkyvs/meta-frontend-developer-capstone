@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Nav.css"
 
-export default function Nav() {
+const Nav = ({vertical, className=""}) => {
   return (
-    <nav id='header__nav'>
+    <nav className={`header__nav ${vertical ? "header__nav--vertical" : ""} ${className}`}>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -15,3 +15,4 @@ export default function Nav() {
     </nav>
   )
 }
+export default Nav

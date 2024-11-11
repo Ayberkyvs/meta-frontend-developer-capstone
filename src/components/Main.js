@@ -10,7 +10,7 @@ export default function Main() {
       <Hero />
       <Highlight />
       <Testimonials />
-      {/* <About /> */}
+      <About />
     </main>
   )
 }

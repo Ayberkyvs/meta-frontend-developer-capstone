@@ -60,6 +60,7 @@ body {
   padding: 0px;
   font-family: 'Markazi Text', 'Segoe UI', 'Roboto',
     sans-serif;
+  background-color: var(--background);
 }
 
 .grid {
