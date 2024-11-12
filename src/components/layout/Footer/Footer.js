@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../Nav/Nav'
+import Nav from '../../ui/Nav/Nav'
 import "./Footer.css"
 
 export default function Footer() {

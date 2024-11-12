@@ -1,8 +1,8 @@
 import React from 'react'
-import mainLogo from "../../assets/mainLogo.jpg"
+import mainLogo from "../../../assets/mainLogo.jpg"
 import "./Header.css"
-import Nav from '../Nav/Nav'
-import Hamburger from '../ui/Hamburger/Hamburger'
+import Nav from '../../ui/Nav/Nav'
+import Hamburger from '../../ui/Hamburger/Hamburger'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);

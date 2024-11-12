@@ -1,7 +1,7 @@
 import React from 'react'
 import './Hamburger.css'
 import { FaXmark, FaBarsStaggered } from 'react-icons/fa6';
-import Nav from '../../Nav/Nav';
+import Nav from '../Nav/Nav';
 
 const Hamburger = () => {
     const [open, setOpen] = React.useState(false);
