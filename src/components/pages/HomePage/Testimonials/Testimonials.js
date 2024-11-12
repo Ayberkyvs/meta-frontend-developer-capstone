@@ -1,7 +1,7 @@
 import React from 'react'
-import Heading from '../ui/Heading/Heading'
+import Heading from '../../../ui/Heading/Heading'
 import './Testimonials.css'
-import TestimonialsCard from '../ui/TestimonialsCard/TestimonialsCard'
+import TestimonialsCard from '../../../ui/TestimonialsCard/TestimonialsCard'
 
 const Testimonials = () => {
   return (

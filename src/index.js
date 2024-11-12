@@ -6,8 +6,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import MainLayout from './layout/MainLayout';
-import HomePage from './pages/HomePage';
+import MainLayout from './components/layout/MainLayout';
+import HomePage from './components/pages/HomePage/HomePage';
+import BookingPage from './components/pages/BookingPage/BookingPage';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
+      {
+        path: "/booking",
+        element: <BookingPage />,
+      },
     ],
   },
 ]);
@@ -25,7 +30,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} future={{ v7_startTransition: true }}/>
   </React.StrictMode>
 );
 

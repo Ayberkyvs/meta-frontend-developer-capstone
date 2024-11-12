@@ -4,6 +4,7 @@ footer#footer {
     background-color: var(--background);
     padding-top: 54px;
     padding-bottom: 54px;
+    z-index: 1;
 }
 
 footer#footer .footer__navbar div {

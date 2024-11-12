@@ -1,6 +1,6 @@
 import React from 'react'
 import './About.css'
-import Heading from '../ui/Heading/Heading'
+import Heading from '../../../ui/Heading/Heading'
 
 const About = () => {
   return (

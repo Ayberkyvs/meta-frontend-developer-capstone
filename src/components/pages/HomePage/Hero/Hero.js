@@ -1,8 +1,8 @@
 import React from 'react'
 import './Hero.css'
-import Heading from '../ui/Heading/Heading'
-import Button from '../ui/Button/Button'
-import HeroImage from "../../assets/photo_1.png"
+import Heading from '../../../ui/Heading/Heading'
+import Button from '../../../ui/Button/Button'
+import HeroImage from "../../../../assets/photo_1.png"
 export default function Hero() {
   return (
     <section id='hero' className='grid'>
