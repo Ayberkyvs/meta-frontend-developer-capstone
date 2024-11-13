@@ -1,7 +1,11 @@
 import React from 'react'
 import BookingForm from './BookingForm'
+import './BookingPage.css'
+import Heading from "../../ui/Heading/Heading";
+import BookingConfirmed from './BookingConfirmed';
 
 const BookingPage = () => {
+    const [isBookingConfirmed, setIsBookingConfirmed] = React.useState(false);
     const availableTimesReducer = (state, action) => {
         switch (action.type) {
           case 'UPDATE_TIMES':
@@ -27,15 +31,28 @@ const BookingPage = () => {
     };
 
     const submitData = (formData) => {
-      console.log("Form Başarıyla Gönderildi, ", formData)
+      console.log("Form Başarıyla Gönderildi, ", formData);
+      setIsBookingConfirmed(true);
     }
   return (
     <section id='booking-page' className='grid'>
-        <BookingForm
-            availableTimes={state.availableTimes}
-            dispatchOnDateChange={updateTimes}
-            submitData={submitData}
-        />
+      <div id='booking-page__container'>
+        <div id='booking-page__image'><img src="https://placehold.co/500x600"/></div>
+        <div id="booking-page__form" className={`${isBookingConfirmed && "booking-page__form--confirmed"}`}>
+          {isBookingConfirmed
+          ? <BookingConfirmed />
+          :
+          <>
+          <Heading title="Make Reservation" variant="section"/>
+          <BookingForm
+              availableTimes={state.availableTimes}
+              dispatchOnDateChange={updateTimes}
+              submitData={submitData}
+            />
+          </>
+          }
+        </div>
+      </div>
     </section>
   )
 }

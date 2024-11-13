@@ -58,6 +58,12 @@ const BookingForm = ({
     const handleFormSubmit = e => {
       e.preventDefault();
       submitData(form);
+      setForm({
+        "booking-form__date": minimumDate,
+        "booking-form__time": defaultTime,
+        "booking-form__guests": minimumNumberOfGuests,
+        "booking-form__occasion": occasions[0]
+      });
     };
 
     return (
@@ -90,6 +96,7 @@ const BookingForm = ({
             value={form["booking-form__time"] || availableTimes[0]}
             required={true}
             onChange={handleChange}
+            disabled={availableTimes.length === 0}
           >
             {availableTimes.map(time =>
               <option data-testid="booking-form__time--option" key={time}>
@@ -139,6 +146,7 @@ const BookingForm = ({
           className="booking-form__button"
           type="submit"
           disabled={!areAllFieldsValid()}
+          variant="fluid"
         >
           Make your reservation
         </Button>

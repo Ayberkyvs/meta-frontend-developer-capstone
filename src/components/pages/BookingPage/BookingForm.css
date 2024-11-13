@@ -1,0 +1,21 @@
+#booking-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    height: fit-content;
+}
+#booking-form input, select {
+    width: 100%;
+    height: 40px;
+    border: 2px solid var(--card-border);
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    padding: 8px 12px 8px 16px;
+}
+/* @media only screen and (max-width: 576px) {
+    #booking-form {
+        grid-column: span 12;
+    }
+} */

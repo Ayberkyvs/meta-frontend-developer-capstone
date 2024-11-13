@@ -1,0 +1,33 @@
+#booking-confirmed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#booking-confirmed .booking-confirmed__icon {
+    font-size: 4em;
+    color: var(--secondary-600);
+    margin-bottom: 20px;
+}
+#booking-confirmed h2{
+    font-size: 2rem;
+    line-height: 1.1;
+}
+#booking-confirmed p {
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+@media only screen and (max-width: 992px) {
+    #booking-confirmed h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-family: 'Karla', 'Roboto',
+      sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }

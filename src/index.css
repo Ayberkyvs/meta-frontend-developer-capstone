@@ -46,6 +46,12 @@
 
   --black: #000000;
   --white: #ffffff;
+
+  --primary-font: 'Markazi Text', 'Segoe UI', 'Roboto',
+  sans-serif;
+
+  --paragraph-font: 'Karla', 'Roboto',
+  sans-serif;
 }
 
 * {
