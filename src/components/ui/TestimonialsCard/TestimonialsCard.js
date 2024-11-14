@@ -4,7 +4,7 @@ import Stars from '../Stars/Stars'
 
 const TestimonialsCard = () => {
   return (
-    <div className='card--testimonials'>
+    <div className='card--testimonials' aria-label='Testimonaials Card'>
         <div className='card--testimonials__header'>
             <img src='https://via.placeholder.com/40x40' alt='avatar' />
             <div className='card--testimonials__header__text'>

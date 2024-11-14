@@ -12,7 +12,7 @@ const Nav = ({vertical, className="", setOpen}) => {
     setOpen && setOpen(false);
   }
   return (
-    <nav className={`header__nav ${vertical ? "header__nav--vertical" : ""} ${className}`}>
+    <nav className={`header__nav ${vertical ? "header__nav--vertical" : ""} ${className}`} aria-label='Navigation'>
         <ul>
             <li><Link to="/" onClick={handleClick}>Home</Link></li>
             <li><Link to="#" onClick={handleClick}>About</Link></li>

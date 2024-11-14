@@ -21,7 +21,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header id='header' className={`grid ${isScrolled && "header--shadow"}`}>
+    <header id='header' className={`grid ${isScrolled && "header--shadow"}`} aria-label='header'>
       <Link to="/" role='link' onClick={()=> {setOpen(false); window.scroll(0,0)}}><img src={mainLogo} alt='Little Lemon Logo'/></Link>
       <Hamburger open={open} setOpen={setOpen}/>
       <Nav />

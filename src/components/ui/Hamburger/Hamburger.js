@@ -15,10 +15,10 @@ const Hamburger = ({open, setOpen}) => {
 
   return (
     <>
-    <div onClick={() => setOpen(prev => !prev)} id='hamburger' role='button'>
+    <div onClick={() => setOpen(prev => !prev)} id='hamburger' role='button' aria-label='Menu Button'>
         {open ? <FaXmark /> : <FaBarsStaggered />}
     </div>
-    {open && <div id='hamburger__menu'>
+    {open && <div id='hamburger__menu' aria-label='Side Mobile Menu'>
         <Nav vertical className='hamburger__menu__nav' setOpen={setOpen}/>
     </div>}
     </>

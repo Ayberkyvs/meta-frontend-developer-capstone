@@ -6,7 +6,7 @@ import { FaCartPlus } from "react-icons/fa6";
 
 const Card = () => {
   return (
-    <div className='card--product'>
+    <div className='card--product' aria-label='Product Card'>
         <div className='card--product__header'>
             <Badge className="card--product__badge">New</Badge>
             <img src='https://via.placeholder.com/217x114' alt='Product' draggable={false}/>
