@@ -8,7 +8,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-bottom: 2px solid var(--card-border);
 }
-#header > img {
+
+#header a, img {
     grid-column: 3 / span 2;
     width: 100%;
     height: auto;
@@ -16,7 +17,7 @@
 }
 
 @media only screen and (max-width: 1440px) {
-    #header > img {
+    #header a, img {
         grid-column: 1 / span 2;
         max-width: 200px;
         max-height: 200px;
@@ -27,13 +28,13 @@
     #header {
         height: 100px;
     }
-    #header > img {
+    #header a, img {
         grid-column: 1 / span 2;
     }
 }
 
 @media only screen and (max-width: 576px) {
-    #header > img {
+    #header a, img {
         grid-column: span 1;
     }
     #header {

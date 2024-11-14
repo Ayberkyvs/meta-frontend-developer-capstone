@@ -67,7 +67,7 @@ const BookingForm = ({
     };
 
     return (
-      <form id="booking-form" onSubmit={handleFormSubmit}>
+      <form id="booking-form" data-testid="booking-form" onSubmit={handleFormSubmit}>
         <FormField
           label="Date"
           htmlFor="booking-form__date"
@@ -147,6 +147,8 @@ const BookingForm = ({
           type="submit"
           disabled={!areAllFieldsValid()}
           variant="fluid"
+          data-testid="booking-form__button"
+          role="button"
         >
           Make your reservation
         </Button>

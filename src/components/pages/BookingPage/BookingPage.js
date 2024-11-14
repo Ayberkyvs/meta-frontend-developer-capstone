@@ -3,25 +3,31 @@ import BookingForm from './BookingForm'
 import './BookingPage.css'
 import Heading from "../../ui/Heading/Heading";
 import BookingConfirmed from './BookingConfirmed';
-
+import { fetchAPI, submitAPI } from '../../utils/api';
 const BookingPage = () => {
     const [isBookingConfirmed, setIsBookingConfirmed] = React.useState(false);
     const availableTimesReducer = (state, action) => {
         switch (action.type) {
           case 'UPDATE_TIMES':
-            // Dummy logic for changing available times based on date
-            console.log("Form submitted with date: ", action.payload.date);
-            return {
-              ...state,
-              availableTimes: ['17:00', '18:00', '19:00', '20:00', '21:00'],
-            };
-          default:
-            return state;
+            try {
+              if (action.payload.date === undefined || action.payload.date === null) {
+                throw new Error('Date is undefined');
+              }else {
+                const data = fetchAPI(new Date(action.payload.date))
+                if (data === undefined || data === null) {
+                  throw new Error('Data is undefined');
+                }
+                return {availableTimes: data};
+              }
+            }catch (error) {
+              console.error(error.message);
+              return state;
+            }
         }
     };
 
     const initialState = {
-        availableTimes: ['17:00', '18:00', '19:00', '20:00', '21:00']
+        availableTimes: fetchAPI(new Date()),
     };
 
     const [state, dispatch] = React.useReducer(availableTimesReducer, initialState);
@@ -31,8 +37,7 @@ const BookingPage = () => {
     };
 
     const submitData = (formData) => {
-      console.log("Form Başarıyla Gönderildi, ", formData);
-      setIsBookingConfirmed(true);
+      setIsBookingConfirmed(submitAPI(formData));
     }
   return (
     <section id='booking-page' className='grid'>
@@ -43,7 +48,7 @@ const BookingPage = () => {
           ? <BookingConfirmed />
           :
           <>
-          <Heading title="Make Reservation" variant="section"/>
+          <Heading title="Make a Reservation" variant="section"/>
           <BookingForm
               availableTimes={state.availableTimes}
               dispatchOnDateChange={updateTimes}

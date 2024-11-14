@@ -3,6 +3,7 @@ import mainLogo from "../../../assets/mainLogo.jpg"
 import "./Header.css"
 import Nav from '../../ui/Nav/Nav'
 import Hamburger from '../../ui/Hamburger/Hamburger'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -20,7 +21,7 @@ export default function Header() {
 
   return (
     <header id='header' className={`grid ${isScrolled && "header--shadow"}`}>
-      <img src={mainLogo} alt='Little Lemon Logo'/>
+      <Link to="/" role='link'><img src={mainLogo} alt='Little Lemon Logo'/></Link>
       <Hamburger />
       <Nav />
     </header>

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
@@ -10,7 +10,7 @@ import MainLayout from './components/layout/MainLayout';
 import HomePage from './components/pages/HomePage/HomePage';
 import BookingPage from './components/pages/BookingPage/BookingPage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <MainLayout />,

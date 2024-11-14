@@ -15,8 +15,8 @@ div#booking-page__container {
     height: 100%;
 }
 #booking-page__image img {
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
 }
