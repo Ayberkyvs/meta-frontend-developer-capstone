@@ -3,8 +3,7 @@ import './Hamburger.css'
 import { FaXmark, FaBarsStaggered } from 'react-icons/fa6';
 import Nav from '../Nav/Nav';
 
-const Hamburger = () => {
-    const [open, setOpen] = React.useState(false);
+const Hamburger = ({open, setOpen}) => {
 
     React.useEffect(() => {
         if (open) {
@@ -20,7 +19,7 @@ const Hamburger = () => {
         {open ? <FaXmark /> : <FaBarsStaggered />}
     </div>
     {open && <div id='hamburger__menu'>
-        <Nav vertical className='hamburger__menu__nav'/>
+        <Nav vertical className='hamburger__menu__nav' setOpen={setOpen}/>
     </div>}
     </>
   )

@@ -24,6 +24,10 @@
     padding: 0;
     margin: 0;
 }
+.header__nav > ul > li:hover, a:hover{
+    color: var(--primary-600);
+    text-decoration: underline;
+}
 
 .header__nav > ul > li > a {
     text-decoration: none;

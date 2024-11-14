@@ -15,6 +15,7 @@ const Highlight = () => {
                 <Card />
                 <Card />
                 <Card />
+                <Card />
             </div>
         </section>
     );

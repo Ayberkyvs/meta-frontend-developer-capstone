@@ -6,7 +6,7 @@ const FormField = ({ children, label, htmlFor, hasError, errorMessage }) => {
         <label htmlFor={htmlFor}>{label}</label>
         {children}
         {hasError && errorMessage ?
-          <p data-testid="form_field__error">{errorMessage}</p> : null}
+          <p data-testid="field-error">{errorMessage}</p> : null}
       </div>
     );
   };

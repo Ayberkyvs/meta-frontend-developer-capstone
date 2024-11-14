@@ -51,10 +51,6 @@ const BookingForm = ({
       });
     }
 
-    React.useEffect(() => {
-      areAllFieldsValid();
-    }, [form]);
-
     const handleFormSubmit = e => {
       e.preventDefault();
       submitData(form);
@@ -134,6 +130,7 @@ const BookingForm = ({
             value={form["booking-form__occasion"]}
             required={true}
             onChange={handleChange}
+            data-testid="booking-form__occasion__select"
           >
             {occasions.map(occasion =>
               <option data-testid="booking-form__occasion--option" key={occasion}>
@@ -147,7 +144,6 @@ const BookingForm = ({
           type="submit"
           disabled={!areAllFieldsValid()}
           variant="fluid"
-          data-testid="booking-form__button"
           role="button"
         >
           Make your reservation

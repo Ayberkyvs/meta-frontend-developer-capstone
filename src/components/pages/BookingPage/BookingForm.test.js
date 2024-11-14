@@ -16,7 +16,7 @@ describe('Booking form', () => {
       const timeSelect = screen.getByLabelText(/Time/);
       const timeOptions = await screen.findAllByTestId('booking-form__time--option');
       const numberOfGuestsInput = screen.getByLabelText(/Number of guests/);
-      const occasionSelect = screen.getByLabelText(/Occasion/);
+      const occasionSelect = screen.getByTestId('booking-form__occasion__select');
       const occasionOptions = await screen.findAllByTestId(`booking-form__occasion--option`);
       const submitButton = screen.getByRole('button');
 
@@ -69,12 +69,13 @@ describe('Booking form', () => {
           submitData={submitData}
         />
       );
-
       const dateInput = screen.getByLabelText(/Date/);
+      const submitButton = screen.getByRole('button');
+
       fireEvent.change(dateInput, { target: { value: '' } });
       fireEvent.blur(dateInput);
-      const errorMessage = screen.getByTestId('form_field__error');
-      const submitButton = screen.getByRole('button');
+
+      const errorMessage = screen.getByTestId('field-error');
 
       expect(errorMessage).toBeInTheDocument();
       expect(errorMessage).toHaveTextContent('Please choose a valid date');
@@ -91,12 +92,13 @@ describe('Booking form', () => {
           submitData={submitData}
         />
       );
-
+      const submitButton = screen.getByRole('button');
       const numberOfGuestsInput = screen.getByLabelText(/Number of guests/);
+
       fireEvent.change(numberOfGuestsInput, { target: { value: '' } });
       fireEvent.blur(numberOfGuestsInput);
-      const errorMessage = screen.getByTestId('form_field__error');
-      const submitButton = screen.getByRole('button');
+
+      const errorMessage = screen.getByTestId('field-error');
 
       expect(errorMessage).toBeInTheDocument();
       expect(errorMessage).toHaveTextContent('Please enter a number between 1 and 10');
